@@ -49,6 +49,7 @@ main > .quadro {
   width: 100%;
   padding: 0.5rem;
   margin: 0.5rem;
+  /* display: block; */
 }
 
 main > .quadro > h3 {
