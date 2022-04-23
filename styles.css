@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  letter-spacing: 0.06rem;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.divider {
+  border-top: 1px solid #97a0af;
+  margin: 0 0.5rem;
+}
+
+/* CABEÇALHO */
+
+header {
+  padding: 1rem;
+}
+
+header > h1 {
+  background: #97a0af;
+  color: #fff;
+  display: inline;
+  padding: 0.1rem 0.5rem;
+  border-radius: 5px;
+}
+
+/* CORPO */
+
+main {
+  display: flex;
+  flex: 1;
+  gap: 2rem;
+  justify-content: space-evenly;
+  color: #49515e;
+}
+
+main > .quadro {
+  height: fit-content;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+main > .quadro > h3 {
+  margin: 0 0.5rem 0.5rem 0.5rem;
+  color: #97a0af;
+}
+
+main > .quadro > .dropZone {
+  padding: 1px 0.6rem;
+  border-radius: 10px;
+}
+
+#toDo {
+  background-color: #dbdee4;
+  border: 4px solid #00b8d9;
+}
+
+#toDo > .card > .status {
+  background-color: #97a0af;
+}
+#inProgress {
+  background-color: #dbdee4;
+  border: 4px solid #ff5630;
+}
+#inProgress > .card > .status {
+  background-color: #97a0af;
+}
+#done {
+  background-color: #dbdee4;
+  border: 4px solid #57d9a3;
+}
+#done > .card > .status {
+  background-color: #97a0af;
+}
+
+main > .quadro > .dropZone > .card {
+  background-color: #fff;
+  padding: 0.5rem;
+  margin: 0.6rem 0;
+  border-radius: 3px;
+  height: 6rem;
+  border: 1px solid #caced6;
+  /* display: flex;
+  align-items: center; */
+}
+main > .quadro > .dropZone > .card > .status {
+  border-radius: 10px;
+  height: 0.5rem;
+  width: 2rem;
+}
+main > .quadro > .dropZone > .card > .content {
+  word-break: break-all;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* RODAPÉ */
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+footer a {
+  color: #97a0af;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <title>To Do List</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Gustavo Rodrigues Oliveira " />
+    <meta
+      name="description"
+      content="Um simples painel onde poderá organizar sua rotina."
+    />
+    <meta name="keywords" content="kanban, to do list, notas" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>To Do List</h1>
+    </header>
+    <hr class="divider" />
+    <main>
+      <div class="quadro">
+        <h3>To Do</h3>
+        <div class="dropZone" id="toDo">
+          <div class="card" draggable="true">
+            <div class="status"></div>
+            <div class="content">Trampar aaaaaaaaaaaaaaaaaassssssss</div>
+          </div>
+          <div class="card" draggable="true">
+            <div class="status"></div>
+            <div class="content">
+              Trampar aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaassssssss
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quadro">
+        <h3>In Progress</h3>
+        <div class="dropZone" id="inProgress">
+          <div class="card" draggable="true">
+            <div class="status"></div>
+            <div class="content">Estudar</div>
+          </div>
+        </div>
+      </div>
+      <div class="quadro">
+        <h3>Done</h3>
+        <div class="dropZone" id="done">
+          <div class="card" draggable="true">
+            <div class="status"></div>
+            <div class="content">Jogar</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <hr class="divider" />
+    <footer>
+      <a
+        href="https://www.linkedin.com/in/gustavo-rodrigues-oliveira"
+        target="_blank"
+        ><i class="bx bxl-linkedin bx-tada-hover"></i
+      ></a>
+      <a href="https://github.com/Gustavo-R-Oliveira" target="_blank"
+        ><i class="bx bxl-github bx-tada-hover"></i
+      ></a>
+      <a href="mailto:gustavo.oliveiraa@gmail.com"
+        ><i class="bx bxl-gmail bx-tada-hover"></i
+      ></a>
+    </footer>
+  </body>
+</html>
