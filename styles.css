@@ -8,6 +8,15 @@
   letter-spacing: 0.06rem;
 }
 
+/* CLASSES DRAG */
+
+.dragstart {
+  padding: 1px 0.6rem;
+  border-radius: 10px;
+  background-color: #c5c7cd;
+  transition: 0.25s;
+}
+
 html,
 body {
   display: flex;
@@ -49,7 +58,6 @@ main > .quadro {
   width: 100%;
   padding: 0.5rem;
   margin: 0.5rem;
-  /* display: block; */
 }
 
 main > .quadro > h3 {
@@ -60,10 +68,10 @@ main > .quadro > h3 {
 main > .quadro > .dropZone {
   padding: 1px 0.6rem;
   border-radius: 10px;
+  /* background-color: #dbdee4; */
 }
 
 #toDo {
-  background-color: #dbdee4;
   border: 4px solid #00b8d9;
 }
 
@@ -71,14 +79,12 @@ main > .quadro > .dropZone {
   background-color: #97a0af;
 }
 #inProgress {
-  background-color: #dbdee4;
   border: 4px solid #ff5630;
 }
 #inProgress > .card > .status {
   background-color: #97a0af;
 }
 #done {
-  background-color: #dbdee4;
   border: 4px solid #57d9a3;
 }
 #done > .card > .status {
