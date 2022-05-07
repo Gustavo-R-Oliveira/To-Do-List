@@ -8,14 +8,7 @@
   letter-spacing: 0.06rem;
 }
 
-/* CLASSES DRAG */
-
-.dragstart {
-  padding: 1px 0.6rem;
-  border-radius: 10px;
-  background-color: #c5c7cd;
-  transition: 0.25s;
-}
+/* CONF INICIAL */
 
 html,
 body {
@@ -24,27 +17,6 @@ body {
   height: 100%;
 }
 
-.divider {
-  border-top: 1px solid #97a0af;
-  margin: 0 0.5rem;
-}
-
-/* CABEÇALHO */
-
-header {
-  padding: 1rem;
-}
-
-header > h1 {
-  background: #97a0af;
-  color: #fff;
-  display: inline;
-  padding: 0.1rem 0.5rem;
-  border-radius: 5px;
-}
-
-/* CORPO */
-
 main {
   display: flex;
   flex: 1;
@@ -52,68 +24,6 @@ main {
   justify-content: space-evenly;
   color: #49515e;
 }
-
-main > .quadro {
-  height: fit-content;
-  width: 100%;
-  padding: 0.5rem;
-  margin: 0.5rem;
-}
-
-main > .quadro > h3 {
-  margin: 0 0.5rem 0.5rem 0.5rem;
-  color: #97a0af;
-}
-
-main > .quadro > .dropZone {
-  padding: 1px 0.6rem;
-  border-radius: 10px;
-  /* background-color: #dbdee4; */
-}
-
-#toDo {
-  border: 4px solid #00b8d9;
-}
-
-#toDo > .card > .status {
-  background-color: #97a0af;
-}
-#inProgress {
-  border: 4px solid #ff5630;
-}
-#inProgress > .card > .status {
-  background-color: #97a0af;
-}
-#done {
-  border: 4px solid #57d9a3;
-}
-#done > .card > .status {
-  background-color: #97a0af;
-}
-
-main > .quadro > .dropZone > .card {
-  background-color: #fff;
-  padding: 0.5rem;
-  margin: 0.6rem 0;
-  border-radius: 3px;
-  height: 6rem;
-  border: 1px solid #caced6;
-  /* display: flex;
-  align-items: center; */
-}
-main > .quadro > .dropZone > .card > .status {
-  border-radius: 10px;
-  height: 0.5rem;
-  width: 2rem;
-}
-main > .quadro > .dropZone > .card > .content {
-  word-break: break-all;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-/* RODAPÉ */
 
 footer {
   display: flex;
@@ -124,4 +34,41 @@ footer {
 
 footer a {
   color: #97a0af;
+}
+
+.divider {
+  border-top: 1px solid #97a0af;
+  margin: 0 0.5rem;
+}
+/*  */
+
+.quadro {
+  height: fit-content;
+  border: 1px solid;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.titulo {
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  min-height: 4rem;
+  border: 1px solid;
+}
+
+.card {
+  border: 1px solid;
+  margin: 0.5rem;
+}
+
+/* CLASSES DRAG */
+
+.dragging {
+  background-color: #333;
+  color: #fff;
+  opacity: 0.5;
+  transition: 0.5s;
 }

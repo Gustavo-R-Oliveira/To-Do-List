@@ -1,50 +1,47 @@
-const cards = document.querySelectorAll(".card");
-const dropzones = document.querySelectorAll(".dropZone");
+const draggables = document.querySelectorAll(".card");
+const containers = document.querySelectorAll(".container");
 
-cards.forEach((card) => {
-  card.addEventListener("dragstart", dragstart);
-  card.addEventListener("drag", drag);
-  card.addEventListener("dragend", dragend);
-});
-
-function dragstart() {
-  // console.log("dragstart");
-  dropzones.forEach((dropzone) => {
-    dropzone.classList.add("dragstart");
+draggables.forEach((draggable) => {
+  draggable.addEventListener("dragstart", () => {
+    draggable.classList.add("dragging");
   });
-}
 
-function drag() {
-  // console.log("drag");
-}
-
-function dragend() {
-  // console.log("dragend");
-  dropzones.forEach((dropzone) => dropzone.classList.remove("dragstart"));
-}
-
-// contenteditable="true"
-// FAZER FUNÇÃO QUE AO CLICAR NO RETANGULO O TEXTO FICA EDITAVEL
-
-dropzones.forEach((dropzone) => {
-  dropzone.addEventListener("dragenter", dragenter);
-  dropzone.addEventListener("dragover", dragover);
-  dropzone.addEventListener("dragleave", dragleave);
-  dropzone.addEventListener("drop", drop);
+  draggable.addEventListener("dragend", () => {
+    draggable.classList.remove("dragging");
+  });
 });
 
-function dragenter() {
-  // console.log("Entrou");
-}
+containers.forEach((container) => {
+  container.addEventListener("dragover", (event) => {
+    event.preventDefault();
+    const elementoSeguinte = sortable(container, event.clientY);
+    const arrastavel = document.querySelector(".dragging");
 
-function dragover() {
-  // console.log("Estou");
-}
+    if (elementoSeguinte == null) {
+      container.appendChild(arrastavel);
+    } else {
+      container.insertBefore(arrastavel, elementoSeguinte);
+    }
+  });
+});
 
-function dragleave() {
-  // console.log("Saí");
-}
+function sortable(container, y) {
+  const cardsDoContainer = [
+    ...container.querySelectorAll(".card:not(.dragging)"),
+  ];
 
-function drop() {
-  // console.log("Soltei");
+  return cardsDoContainer.reduce(
+    (cardMaisProximo, card) => {
+      const box = card.getBoundingClientRect();
+      const posicao = y - box.top - box.height / 2;
+      if (posicao < 0 && posicao > cardMaisProximo.offset) {
+        return { offset: posicao, element: card };
+      } else {
+        return cardMaisProximo;
+      }
+    },
+    {
+      offset: Number.NEGATIVE_INFINITY,
+    }
+  ).element;
 }
