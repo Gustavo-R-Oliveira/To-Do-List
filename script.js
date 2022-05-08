@@ -4,10 +4,18 @@ const containers = document.querySelectorAll(".container");
 draggables.forEach((draggable) => {
   draggable.addEventListener("dragstart", () => {
     draggable.classList.add("dragging");
+
+    containers.forEach((container) => {
+      container.classList.add("draggingContainer");
+    });
   });
 
   draggable.addEventListener("dragend", () => {
     draggable.classList.remove("dragging");
+
+    containers.forEach((container) => {
+      container.classList.remove("draggingContainer");
+    });
   });
 });
 
@@ -44,4 +52,8 @@ function sortable(container, y) {
       offset: Number.NEGATIVE_INFINITY,
     }
   ).element;
+}
+
+function mudarModo() {
+  document.querySelector("html").classList.toggle("darkMode");
 }

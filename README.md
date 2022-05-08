@@ -1,11 +1,11 @@
 # All-Lyrics
 
-Um simples organizador de tarefas com propriedades Darg'n Drop.
+Um simples organizador de tarefas com propriedades Darg'n Drop e Sortable para mostrar o básico de seus funcionamentos.
 
 ## Status
 
 <p>
-<img src="https://img.shields.io/static/v1?label=STATUS&message=EM%20%20CONSTRU%C3%87%C3%83O&color=orange&style=for-the-badge"/>
+<img src="https://img.shields.io/static/v1?label=STATUS&message=EM%20%20CONSTRU%C3%87%C3%83O&color=green&style=for-the-badge"/>
 </p>
 
 ## Tecnologias utilizadas
