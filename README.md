@@ -2,6 +2,10 @@
 
 Um simples organizador de tarefas com propriedades Darg'n Drop e Sortable para mostrar o básico de seus funcionamentos.
 
+<p align="center">
+<img src="assets/toDoList.gif">
+</p>
+
 ## Status
 
 <p>
